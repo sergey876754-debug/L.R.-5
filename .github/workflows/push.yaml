@@ -22,9 +22,11 @@ jobs:
 
 
       - name: Run Unit Tests
-        run: | 
-          pip install -e .
-          pytest -q
+        working-directory: dockerCI
+        run: |
+              pip install -e .
+              pytest -q
+
 
 
 
