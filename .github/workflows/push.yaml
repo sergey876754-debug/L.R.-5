@@ -60,7 +60,9 @@ jobs:
       - name: Build and push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: .
+         context: ./my-python-app
+         file: ./my-python-app/Dockerfile
+
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
